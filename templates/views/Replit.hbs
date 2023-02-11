@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>upperlinks}}
+    <title>Replit</title>
+</head>
+
+<body>
+    {{>nav}}
+    <div class="intro">
+        <h1>AI-Powered Replit Overview</h1>
+        <div class="read-word"></div>
+        <div class="count-word"></div>
+       <p>With Replit, developers can write, modify, and execute code directly from their browsers. Replit is a cloud-based
+    development environment.
+    Python, JavaScript, Ruby, Swift, and many other programming languages are supported by the platform.</p>
+    <p>Replit's AI-powered autocompletion, which proposes code snippets and completes partially typed lines of code, is one of
+    its standout features.
+    In particular for young or unskilled programmers, this speeds up coding and reduces error-proneness.
+    Replit's AI-powered syntax highlighting and indentation also contribute to better reading and comprehension of code.</p>
+    <p>Replit also has collaboration capabilities that let numerous developers collaborate in real-time on the same codebase.
+    For remote teams, as well as for students and teachers in educational contexts, this may be extremely helpful.</p>
+    <p>Replit also interfaces with other programmes and platforms, such as Github, making it simple for programmers to exchange
+    code and work together on projects.
+    As a result, it serves as an excellent platform for both individual and team growth.</p>
+    <p>Replit offers a user-friendly interface, a sizable developer community, and AI-powered capabilities in addition to other
+    features.
+    It is therefore a fantastic option for anyone searching for a practical, approachable, and potent development
+    environment.</p>
+    <p>Replit is an all-around effective and adaptable tool for developers, and its AI-powered capabilities set it apart from
+    the competition in the competitive market for development environments.
+    Replit is unquestionably a development platform worth taking into consideration, regardless of your level of experience.</p>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        const paragraphs = document.querySelectorAll(".intro p");
+        const readTimeDiv = document.querySelector(".read-word");
+        const count = document.querySelector(".count-word");
+
+        const calculatedReadTime = () => {
+            let numberOfWords = 0;
+            const averageWPM = 265;
+
+            paragraphs.forEach(paragraph => {
+                numberOfWords += paragraph.innerHTML.split(" ").length;
+            })
+
+            let readTime = numberOfWords / averageWPM;
+
+            readTimeDiv.innerHTML = Math.round(readTime) + " minute read"
+            count.innerHTML = numberOfWords + " -words approximate"
+
+        }
+        calculatedReadTime();
+
+
+
+    </script>
+
+    {{>lowerlinks}}
+</body>
+
+</html>

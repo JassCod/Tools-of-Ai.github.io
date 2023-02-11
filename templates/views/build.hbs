@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>upperlinks}}
+    <title>Build AI</title>
+</head>
+
+<body>
+    {{>nav}}
+    <div class="intro">
+        <h1>BuilAI AI Overview</h1>
+        <div class="read-word"></div>
+        <div class="count-word"></div>
+        <p>BuildAI is a programme created to speed up, simplify, and improve accessibility for non-experts in the development of
+        Artificial Intelligence (AI) models and applications.
+        Users of the programme may create AI models without any coding knowledge .</p>
+        <p>The BuildAI tool offers a visual interface where users may develop a particular kind of AI model, such as speech
+        recognition, picture classification, or natural language processing.
+        The programme then builds the model's base code automatically and offers a straightforward interface for changing it.</p>
+        <p>The fact that BuildAI does not require users to have a thorough grasp of AI and machine learning topics is one of its
+        main advantages.
+        Users can create and deploy AI models with a few clicks, freeing up time and resources for other work.
+        Additionally, non-technical people may experiment with AI and learn about its potential.</p>
+        <p>Reduced time spent on building AI models is another benefit of BuildAI.
+        Instead of the days or weeks it would take without the tool, users can develop a simple AI model with it in just a few
+        minutes, and more complex models in only a few hours.
+        This is crucial for companies who have to experiment with new concepts or react swiftly to market developments.</p>
+        <p>In conclusion, BuildAI is a platform that expedites the development of AI models and makes AI approachable to a larger
+        audience.
+        BuildAI makes it simpler for users to explore with artificial intelligence and create their own models by offering a
+        visual interface and removing the need for technical expertise.
+        Tools like BuildAI will become more and more crucial in assisting firms in maintaining their competitiveness as AI
+        continues to play an increasingly significant role in the commercial sector.</p>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        const paragraphs = document.querySelectorAll(".intro p");
+        const readTimeDiv = document.querySelector(".read-word");
+        const count = document.querySelector(".count-word");
+
+        const calculatedReadTime = () => {
+            let numberOfWords = 0;
+            const averageWPM = 265;
+
+            paragraphs.forEach(paragraph => {
+                numberOfWords += paragraph.innerHTML.split(" ").length;
+            })
+
+            let readTime = numberOfWords / averageWPM;
+
+            readTimeDiv.innerHTML = Math.round(readTime) + " minute read"
+            count.innerHTML = numberOfWords + " -words approximate"
+
+        }
+        calculatedReadTime();
+
+
+
+    </script>
+
+    {{>lowerlinks}}
+</body>
+
+</html>

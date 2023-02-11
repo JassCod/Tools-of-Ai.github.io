@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>upperlinks}}
+    <title>Gling</title>
+</head>
+
+<body>
+    {{>nav}}
+    <div class="intro">
+        <h1>GPT-3 AI Language Model</h1>
+        <div class="read-word"></div>
+        <div class="count-word"></div>
+        <p>One of the top research groups in the field of artificial intelligence, OpenAI, created the GPT-3 language model.
+        It is one of the most potent AI language models on the market today and has been trained on a vast quantity of text
+        data, enabling it to provide replies that are human-like to a variety of requests.</p>
+        <p>The GPT-3 language model is intended to comprehend the prompt's context and produce an answer that is pertinent,
+        logical, and grammatically sound.
+        This makes it an effective tool for jobs like content creation, language translation, and summarization.</p>
+        <p>The capacity of GPT-3 to produce high-quality writing, such as articles, tales, and poetry, with little input from the
+        user is one of its most prominent qualities.
+        Deep learning algorithms and a vast quantity of training data are used to do this, giving the model the ability to
+        comprehend and produce language similarly to how a person would.</p>
+        <p>GPT-3 is capable of a broad range of other tasks in addition to text generation, including sentiment analysis, named
+        entity identification, and text categorization.
+        It is a valuable tool for companies and organisations wanting to automate numerous language-related processes because of
+        its adaptability.</p>
+        <p>The development of chatbots, virtual assistants, and other conversational interfaces using GPT-3 is one of the most
+        interesting possible uses for this technology.
+        GPT-3 has the potential to fundamentally alter how humans engage with technology because of its capacity to comprehend
+        context and produce human-like answers.</p>
+        <p>GPT-3 is an effective instrument with the potential to revolutionise several industries and areas.
+        It is an intriguing tool for companies and organisations trying to harness the power of artificial intelligence because
+        of its capacity to produce high-quality text, carry out a variety of language-related activities, and comprehend
+        context.</p>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        const paragraphs = document.querySelectorAll(".intro p");
+        const readTimeDiv = document.querySelector(".read-word");
+        const count = document.querySelector(".count-word");
+
+        const calculatedReadTime = () => {
+            let numberOfWords = 0;
+            const averageWPM = 265;
+
+            paragraphs.forEach(paragraph => {
+                numberOfWords += paragraph.innerHTML.split(" ").length;
+            })
+
+            let readTime = numberOfWords / averageWPM;
+
+            readTimeDiv.innerHTML = Math.round(readTime) + " minute read"
+            count.innerHTML = numberOfWords + " -words approximate"
+
+        }
+        calculatedReadTime();
+
+
+
+    </script>
+
+    {{>lowerlinks}}
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>upperlinks}}
+    <title>Suggest-Gift</title>
+</head>
+
+<body>
+    {{>nav}}
+    <div class="intro">
+        <h1>AI Gift Suggestion Tool</h1>
+        <div class="read-word"></div>
+        <div class="count-word"></div>
+        <p>A cutting-edge tool for helping people choose the ideal present for their loved ones is an AI-powered gift
+        recommendation tool.
+        Due to the rising demand for AI-based solutions, many businesses are now providing gift recommendation systems that make
+        use of the capabilities of artificial intelligence to enhance the personal and pleasant aspects of gift-giving.</p>
+        <p>How it works:</p>
+        <p>Information about the recipient's preferences, interests, and previous present selections is gathered by the AI-powered
+        gift recommendation tool.
+        Each recipient's individualised gift recommendation list is made using the information provided.
+        The tool considers a variety of elements, such as the recipient's age, gender, interests, and personal style.
+        The tool also takes into account the occasion, such as birthdays, anniversaries, or holidays, for which the present is
+        being given.</p>
+        <p>Benefits of using an AI-powered gift suggestion tool:</p>
+        <ol>
+            <li>Time-saving feature: The AI-powered gift recommendation tool does away with the need to spend hours looking through
+            present possibilities.
+            A list of suggestions that are suited to the recipient's tastes and requirements is immediately provided by the
+            application.</li>
+            <li>Personalization: The AI-powered gift suggestion tool may provide recommendations that are specific to each person by
+            leveraging data and information about the receiver.</li>
+            <li>Convenience: People who are short on time or unable to physically visit a business may find the gift suggestion tool to
+            be useful because it can be accessed from anywhere, at any time.</li>
+            <li>Increased precision: The AI-powered gift suggestion tool can examine a variety of data to provide precise and
+            individualised recommendations.
+            This increases customer satisfaction and reduces the possibility that the recipient won't like the gift.</li>
+        </ol>
+        <p>In conclusion, an AI-powered gift suggestion tool offers a convenient, time-saving, and personalized solution for
+        gift-giving. With the help of artificial intelligence, individuals can now find the perfect gift for their loved ones,
+        ensuring that their gifts are well-received and appreciated.</p>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        const paragraphs = document.querySelectorAll(".intro p");
+        const readTimeDiv = document.querySelector(".read-word");
+        const count = document.querySelector(".count-word");
+
+        const calculatedReadTime = () => {
+            let numberOfWords = 0;
+            const averageWPM = 265;
+
+            paragraphs.forEach(paragraph => {
+                numberOfWords += paragraph.innerHTML.split(" ").length;
+            })
+
+            let readTime = numberOfWords / averageWPM;
+
+            readTimeDiv.innerHTML = Math.round(readTime) + " minute read"
+            count.innerHTML = numberOfWords + " -words approximate"
+
+        }
+        calculatedReadTime();
+
+
+
+    </script>
+
+    {{>lowerlinks}}
+</body>
+
+</html>

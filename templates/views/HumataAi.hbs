@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>upperlinks}}
+    <title>Humata</title>
+</head>
+
+<body>
+    {{>nav}}
+    <div class="intro">
+        <h1>Humata: AI Tool Overview</h1>
+        <div class="read-word"></div>
+        <div class="count-word"></div>
+      <p>Humata is an artificial intelligence (AI) platform that uses machine learning and natural language processing to assist
+    businesses and organisations make better decisions.
+    It is a platform designed to make the usage of AI as simple and user-friendly as possible, enabling users to simply
+    construct, deploy, and integrate AI models into their current processes.</p>
+    <p>Humata's capacity to analyse massive volumes of data and get actionable insights from it is one of its primary
+    strengths.
+    Humata can analyse enormous volumes of data and offer useful insights and suggestions to its consumers by utilising
+    cutting-edge machine learning algorithms and natural language processing techniques.
+    Because of this, it is the perfect tool for companies and other organisations trying to acquire a competitive edge
+    through data-driven decision-making.</p>
+    <p>Along with offering strong data analysis capabilities, Humata also has an easy-to-use interface that makes working with
+    AI models straightforward for users.
+    The platform contains a variety of pre-built models that may be quickly incorporated into current processes, as well as
+    a drag-and-drop interface for creating and training machine learning models.
+    This makes it simple for customers to start utilising the tool and start reaping the rewards of AI-driven
+    decision-making, even if they have little or no prior expertise with AI.</p>
+    <p>The flexibility of Humata to integrate with a variety of other tools and platforms is another crucial aspect.
+    The platform may be coupled with a variety of different tools and systems, such as data storage platforms, business
+    intelligence tools, and more. It is designed to be very versatile and configurable.
+    Because of this, users may simply integrate AI into their current workflows without having to significantly alter their
+    current systems and procedures.</p>
+    <p>To sum up, Humata is a strong and adaptable AI platform that gives companies and organisations the capacity to make
+    data-driven decisions and acquire a competitive edge.
+    Humata makes it simple for businesses to start utilising the advantages of AI and obtain a deeper knowledge of their
+    data thanks to its user-friendly interface and ability to link with other tools and platforms.</p>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        const paragraphs = document.querySelectorAll(".intro p");
+        const readTimeDiv = document.querySelector(".read-word");
+        const count = document.querySelector(".count-word");
+
+        const calculatedReadTime = () => {
+            let numberOfWords = 0;
+            const averageWPM = 265;
+
+            paragraphs.forEach(paragraph => {
+                numberOfWords += paragraph.innerHTML.split(" ").length;
+            })
+
+            let readTime = numberOfWords / averageWPM;
+
+            readTimeDiv.innerHTML = Math.round(readTime) + " minute read"
+            count.innerHTML = numberOfWords + " -words approximate"
+
+        }
+        calculatedReadTime();
+
+
+
+    </script>
+
+    {{>lowerlinks}}
+</body>
+
+</html>

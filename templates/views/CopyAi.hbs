@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>upperlinks}}
+    <title>Copy.ai</title>
+</head>
+
+<body>
+    {{>nav}}
+    <div class="intro">
+        <h1>Copy.ai Text Generation</h1>
+        <div class="read-word"></div>
+        <div class="count-word"></div>
+        <p>Using artificial intelligence (AI), the programme copy.ai creates high-quality content for a variety of tasks, including
+        blog articles, product descriptions, and more.
+        The programme analyses a lot of material to find patterns and common themes using sophisticated natural language
+        processing (NLP) methods.
+        It then makes use of this data to produce new content that is stylistically and grammatically close to the original.</p>
+        <p>Copy.ai may help content authors save time and effort, which is one of its key advantages.
+        Users only need to enter a few keywords or phrases, and the programme will create a high-quality piece of content in a
+        matter of minutes, saving them from having to spend hours researching and creating new stuff.
+        This is especially helpful for companies and people that frequently need to generate huge volumes of information.</p>
+        <p>The ability to generate content that is SEO-friendly, or optimised for search engines like Google, is another advantage
+        of Copy.ai.
+        This can increase a website's exposure and make online information simpler for users to locate.</p>
+        <p>The application also provides users with a range of customization options so they may modify the produced text to suit
+        their particular requirements.
+        Users can select from a variety of tone and style options, for instance, such as formal, casual, or amusing.
+        Additionally, they may choose the text's length, which ranges from a few phrases to many pages.</p>
+        <p>Copy.ai is simple to use and doesn't require any technical knowledge.
+        The programme will produce the content for users if they just enter their keywords or phrases and their selected
+        alternatives.
+        The created text can then be utilised as is or changed as necessary.</p>
+        <p>In conclusion, Copy.ai is an effective application that makes use of AI to produce excellent writing for a range of
+        needs.
+        It is a useful tool for organisations and people that need to effortlessly and rapidly publish big volumes of material
+        due to its time-saving and customisation options.</p>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        const paragraphs = document.querySelectorAll(".intro p");
+        const readTimeDiv = document.querySelector(".read-word");
+        const count = document.querySelector(".count-word");
+
+        const calculatedReadTime = () => {
+            let numberOfWords = 0;
+            const averageWPM = 265;
+
+            paragraphs.forEach(paragraph => {
+                numberOfWords += paragraph.innerHTML.split(" ").length;
+            })
+
+            let readTime = numberOfWords / averageWPM;
+
+            readTimeDiv.innerHTML = Math.round(readTime) + " minute read"
+            count.innerHTML = numberOfWords + " -words approximate"
+
+        }
+        calculatedReadTime();
+
+
+
+    </script>
+
+    {{>lowerlinks}}
+</body>
+
+</html>

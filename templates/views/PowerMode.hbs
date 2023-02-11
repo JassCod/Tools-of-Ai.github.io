@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>upperlinks}}
+    <title>PowerMode</title>
+</head>
+
+<body>
+    {{>nav}}
+    <div class="intro">
+        <h1>PowerMode AI Productivity Tool</h1>
+        <div class="read-word"></div>
+        <div class="count-word"></div>
+        <p>"PowerMode: The AI Tool Revolutionizing the Way We Work"</p>
+        <p>Productivity has risen to the top of the priority list for many people and companies in the fast-paced world of today.
+        More than ever, it is necessary to be able to work successfully and efficiently, which has increased the creation of
+        tools and technology that enable people to operate more efficiently.
+        PowerMode, an AI-powered productivity tool that has been making waves in the IT industry, is one example of such a tool.</p>
+        <p>PowerMode is a highly unique and advanced technology that optimises operations and streamlines procedures using
+        artificial intelligence algorithms.
+        It examines your working styles and routines and makes recommendations on how to increase productivity and efficiency.
+        The tool's straightforward and user-friendly design makes it simple for users to grasp its concepts and take advantage
+        of its capabilities.</p>
+        <p>PowerMode's capacity to automate tedious activities is one of its most outstanding features.
+        For instance, PowerMode can automate the process of copying and pasting data from one document to another, saving you
+        important time and effort.
+        Simply using this function will significantly increase your workplace efficiency and free up time for other crucial
+        duties.</p>
+        <p>PowerMode's capability to integrate with other tools and systems is another crucial characteristic.
+        This implies that you may combine PowerMode with other applications you already use, like Microsoft Office, Google
+        Suite, and a host of others.
+        Your work process will be easier and more productive thanks to this connection, which enables you to operate
+        effortlessly across all of your platforms and tools.</p>
+        <p>Additionally, PowerMode features an effective analytics tool that offers insights into your work habits and tendencies.
+        It gives you a thorough analysis of your work, including how much time you devote to each activity, what tools and
+        software you use, and more.
+        Individuals seeking to streamline their work processes and businesses seeking to enhance workflows may both benefit
+        greatly from this knowledge.</p>
+        <p>In conclusion, PowerMode is a revolutionary technology that has the potential to completely change how we operate.
+        PowerMode can assist people and organisations in working more productively and efficiently because to its cutting-edge
+        AI algorithms, robust automation capabilities, and easy interface with other tools and systems.
+        PowerMode is a tool that may help you increase your productivity and efficiency whether you're a freelancer, small
+        business owner, or a member of a large corporation.</p>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        const paragraphs = document.querySelectorAll(".intro p");
+        const readTimeDiv = document.querySelector(".read-word");
+        const count = document.querySelector(".count-word");
+
+        const calculatedReadTime = () => {
+            let numberOfWords = 0;
+            const averageWPM = 265;
+
+            paragraphs.forEach(paragraph => {
+                numberOfWords += paragraph.innerHTML.split(" ").length;
+            })
+
+            let readTime = numberOfWords / averageWPM;
+
+            readTimeDiv.innerHTML = Math.round(readTime) + " minute read"
+            count.innerHTML = numberOfWords + " -words approximate"
+
+        }
+        calculatedReadTime();
+
+
+
+    </script>
+
+    {{>lowerlinks}}
+</body>
+
+</html>

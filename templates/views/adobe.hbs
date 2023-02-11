@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{>upperlinks}}
+    <title>adobe</title>
+</head>
+
+<body>
+    {{>nav}}
+    <div class="intro">
+        <h1>Adobe Podcast AI Overview</h1>
+        <div class="read-word"></div>
+        <div class="count-word"></div>
+        <p>Adobe Podcast AI is a brand-new AI-powered product that was just released for podcast producers by Adobe.
+            The application is made to assist podcast producers in optimising their programmes and enhancing listener
+            satisfaction.
+        </p>
+        <p>Advanced machine learning techniques are used by Adobe Podcast AI to assess audio content and offer
+            suggestions for
+            improving and editing it.
+            The tool can identify problems including background noise, clipping, and low levels and provide solutions.
+            Additionally, it includes recommendations for enhancing the podcast's overall production quality by using
+            music, sound
+            effects, and other audio components.
+        </p>
+        <p>One of Adobe Podcast AI's primary benefits is its capacity to instantly translate audio files, which makes it
+            simpler
+            for podcast producers to modify their programmes.
+            The programme creates precise transcriptions through the use of speech recognition and natural language
+            processing,
+            which may subsequently be modified and improved upon as necessary.
+        </p>
+        <p>Adobe Podcast AI offers statistics and insights into the performance of a podcast in addition to editing and
+            augmenting
+            audio material.
+            The most popular episodes, average listen time, and the total number of downloads are all available to
+            creators.
+            Making data-driven decisions based on this information can enable podcast makers to better engage their
+            listeners and
+            increase the overall success of their show.</p>
+        <p>Another important feature of Adobe Podcast AI is its integration with the Adobe Creative Cloud. Podcast
+            creators can
+            easily access the tool from within Adobe Audition and other Creative Cloud applications, streamlining the
+            production
+            process and making it easier to create high-quality podcasts.</p>
+        <p>In conclusion, Adobe Podcast AI is an effective tool for podcast producers that want to raise the level of
+            production on
+            their programmes and engage their listeners.
+            The podcasting business is about to undergo a transformation as a result of Adobe Podcast AI's cutting-edge
+            machine
+            learning algorithms, real-time transcribing capabilities, and extensive analytics and insights.</p>
+
+    </div>
+    <script>
+        const paragraphs = document.querySelectorAll(".intro p");
+        const readTimeDiv = document.querySelector(".read-word");
+        const count = document.querySelector(".count-word");
+
+        const calculatedReadTime = ()=>{
+            let numberOfWords = 0;
+            const averageWPM = 265;
+
+            paragraphs.forEach(paragraph =>{
+                numberOfWords += paragraph.innerHTML.split(" ").length;
+            })
+
+            let readTime = numberOfWords / averageWPM;
+
+            readTimeDiv.innerHTML = Math.round(readTime) + " minute read"
+            count.innerHTML = numberOfWords + " -words approximate"
+
+            {{!-- console.log("number of words"+numberOfWords) --}}
+            {{!-- console.log("read time is " + Math.round(readTime)); --}}
+        }
+        calculatedReadTime();
+
+
+
+    </script>
+
+    {{>lowerlinks}}
+</body>
+
+</html>
