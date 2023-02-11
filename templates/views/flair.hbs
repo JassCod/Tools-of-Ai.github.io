@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>upperlinks}}
+    <title>Flair</title>
+</head>
+
+<body>
+    {{>nav}}
+    <div class="intro">
+        <h1>Flair AI NLP Toolkit</h1>
+        <div class="read-word"></div>
+        <div class="count-word"></div>
+        <p>Flair is a Python-based Natural Language Processing (NLP) toolbox that is open-source and multilingual.
+        For tasks like Named Entity Recognition (NER), Part-of-Speech (PoS) tagging, Text Classification, and Text Generation,
+        it offers a straightforward API for employing cutting-edge NLP models.</p>
+        <p>The simplicity of usage is one of Flair's best qualities.
+        Without needing to spend a lot of effort on preprocessing, feature extraction, and data preparation, developers and
+        researchers may rapidly begin experimenting with NLP models.
+        With only a few lines of code, NLP models can be trained on any text corpus and fine-tuned for certain applications
+        using Flair.</p>
+        <p>Additionally, Flair offers pre-trained models in a variety of languages for specific NLP tasks that may be quickly
+        loaded and used to a variety of situations.
+        These models have received state-of-the-art results on several NLP benchmarks after being trained on substantial
+        datasets.
+        This makes it simple for developers and researchers to begin using NLP without needing to invest a lot of effort in
+        training and data preparation.</p>
+        <p>In addition to being simple to use, Flair offers cutting-edge tools for NLP research.
+        It has a versatile API for building unique NLP models as well as support for deep learning frameworks like PyTorch for
+        model training and evaluation.</p>
+        <p>Overall, Flair is a strong and adaptable NLP tool that makes it simple for academics and developers to test out the most
+        recent NLP models and methodologies.
+        Flair is a fantastic option for your NLP needs, regardless of whether you are developing a chatbot, sentiment analysis
+        system, or any other NLP-based application.</p>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        const paragraphs = document.querySelectorAll(".intro p");
+        const readTimeDiv = document.querySelector(".read-word");
+        const count = document.querySelector(".count-word");
+
+        const calculatedReadTime = () => {
+            let numberOfWords = 0;
+            const averageWPM = 265;
+
+            paragraphs.forEach(paragraph => {
+                numberOfWords += paragraph.innerHTML.split(" ").length;
+            })
+
+            let readTime = numberOfWords / averageWPM;
+
+            readTimeDiv.innerHTML = Math.round(readTime) + " minute read"
+            count.innerHTML = numberOfWords + " -words approximate"
+
+        }
+        calculatedReadTime();
+
+
+
+    </script>
+
+    {{>lowerlinks}}
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+[
+    {
+        "id":1,
+        "title":"Adobe Podcast",
+        "description":"Provides 2 free quick tools to enhance audio for your content. Enhance speech- Enhance speech by removing all background noise and echo. Mic Check - Unlock quality sound from your microphone. The main product promises to provide AI-powered audio recording and editing, all on the web and is under waitlist.",
+        "image":"images/AdobePodcast.webp",
+        "link":"adobe",
+        "links":"https://podcast.adobe.com/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia"
+    },
+    {
+        "id": 2,
+        "image": "images/BuildAi.webp",
+        "title": "Build AI",
+        "description": "Build AI helps you build AI apps in minutes. You will be able to build an app and publish it completely by yourself. You will be able to update it as you see fit, including improving and refining your prompts to make your app the best it can be.",
+        "link": "build",
+        "links":"https://www.buildai.space/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia"
+    },
+    {
+        "id": 3,
+        "title": "chatGPT",
+        "description": "ChatGPT: Optimizing Language Models for Dialogue. The dialogue format makes it possible for ChatGPT to answer followup questions, admit its mistakes, challenge incorrect premises, and reject inappropriate requests.",
+        "image": "./images/chatGPT.webp",
+        "link": "chatGPT",
+        "links": "https://chat.openai.com/chat?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia"
+    },
+    {
+        "id": 4,
+        "title": "Copy.ai",
+        "description": "Get great copy that sells. Copy.ai is an AI-powered copywriter that generates high-quality copy for your business. Get started for free, no credit card required! Marketing simplified!",
+        "image": "images/CopyAI.webp",
+        "link": "CopyAI",
+        "links": "https://www.copy.ai/?via=futurepedia"
+    },
+    {
+        "id": 5,
+        "title": "Flair AI",
+        "description": "AI Design Tool for Branded Content. You can use it to generate great product photos for your advertisements or other content.",
+        "image": "images/flairAI.webp",
+        "link": "flair",
+        "links": "https://flair.ai/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia"
+    },
+    {
+        "id": 6,
+        "title": "Gling",
+        "description": "Gling is an AI tool made for video content creators. Their AI will cut silences and bad takes for you so you can focus on your YouTube videos.",
+        "image": "images/Gling.webp",
+        "link": "Gling",
+        "links": "https://www.gling.ai/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia"
+    },
+    {
+        "id": 7,
+        "title": "HumataAi",
+        "description": "Upload a PDF and get answers from it. Create Reports 100X Faster. Understand Technical Documents 100X Faster. Analyze Legal Documents 100X Faster",
+        "image": "images/HumataAi.webp",
+        "link": "HumataAi",
+        "links": "https://www.humata.ai/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia"
+    },
+    {
+        "id": 9,
+        "title": "PowerMode AI",
+        "description": "PowerMode is your AI co-founder that will help you ideate and pitch your startup.",
+        "image": "images/PowerModeAi.webp",
+        "link": "PowerMode",
+        "links": "https://powermodeai.com/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia"
+    },
+    {
+        "id": 10,
+        "title": "Replit",
+        "description": "Replit recently added a feature called Ghostwriter that uses AI to complete code. Write and run code in 50+ languages in your browser with Replit, a powerful IDE, compiler, & interpreter. ",
+        "image": "images/Replit.webp",
+        "link": "Replit",
+        "links": "https://replit.com/"
+    },
+    {
+        "id": 11,
+        "title": "Rytr",
+        "description": "Rytr is an AI writing assistant that helps you create high-quality content, in just a few seconds, at a fraction of the cost!",
+        "image": "images/Rytr.webp",
+        "link": "Rytr",
+        "links": "https://rytr.me/?via=futurepedia"
+    },
+    {
+        "id": 12,
+        "title": "Slides AI",
+        "description": "Create Presentation Slides with AI in seconds Say goodbye to tedious, manual slides creation. Let the AI write the outline and presentation content for you. With their tool, you can easily create professional, engaging slides from any text in no time. Works with Google Slides. Coming soon for Microsoft Powerpoint.",
+        "image": "images/SlidesAi.webp",
+        "link": "Slides",
+        "links": "https://www.slidesai.io/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia"
+    },
+    {
+        "id": 13,
+        "title": "Suggest Gift",
+        "description": "Are you struggling to find the perfect gift for a loved one? Look no further! Our tool uses the latest AI technology to help you discover the perfect present. Say goodbye to the stress of gift-giving and let our technology do the work for you.",
+        "image": "images/Suggest Gift.webp",
+        "link": "SuggestGift",
+        "links": "https://suggest.gift/?utm_source=futurepedia&utm_medium=marketplace&utm_campaign=futurepedia"
+    }
+]

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>upperlinks}}
+    <title>Slides AI</title>
+</head>
+
+<body>
+    {{>nav}}
+    <div class="intro">
+        <h1>SlideAI AI Presentation Tool</h1>
+        <div class="read-word"></div>
+        <div class="count-word"></div>
+        <p>An AI-powered tool called SlideAI is changing the way people do presentations.
+        Without any prior design experience or technical understanding, users may quickly and simply produce presentations with
+        a professional appearance.
+        SlideAI streamlines the creation of presentations by utilising cutting-edge machine learning algorithms and natural
+        language processing, relieving users of the time-consuming duties of manual formatting and layout.</p>
+        <p>Users may easily build slides with the tool's user-friendly interface and include text, photos, charts, and other
+        information.
+        SlideAI's AI-powered design ideas feature makes it simple for users to produce aesthetically appealing presentations by
+        automatically generating layout options for the material.
+        Additionally, users of the programme have access to a sizable collection of templates and styles, making it simpler for
+        them to select the ideal style for their presentations.</p>
+        <p>The capability of SlideAI to assess the presentation's content and offer pertinent design recommendations is another
+        noteworthy feature.
+        The tool can pinpoint the presentation's core topic and goal while also making layout, colour, and font suggestions that
+        are appropriate for the content's tone and design.
+        To assist users in creating presentations that are well-organized and appear professional, the programme also provides
+        automated slide numbering, bullet-point formatting, and other formatting choices.</p>
+        <p>Additionally, SlideAI has collaboration tools that let numerous people work on the same presentation at once.
+        Users may easily share presentations with their coworkers and clients thanks to the tool's integration with widely used
+        cloud storage services.
+        Users may more easily hone and improve their presentations thanks to the tool's real-time AI comments and suggestions.</p>
+        <p>For the development of presentations, SlideAI is a game-changer.
+        Anyone trying to produce effective and professional presentations should use this application because of its AI-powered
+        design advice and collaborative options.
+        SlideAI provides an easy-to-use and effective method for making presentations that stand out from the competition,
+        whether of whether you're a student, a business expert, or a creative.</p>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        const paragraphs = document.querySelectorAll(".intro p");
+        const readTimeDiv = document.querySelector(".read-word");
+        const count = document.querySelector(".count-word");
+
+        const calculatedReadTime = () => {
+            let numberOfWords = 0;
+            const averageWPM = 265;
+
+            paragraphs.forEach(paragraph => {
+                numberOfWords += paragraph.innerHTML.split(" ").length;
+            })
+
+            let readTime = numberOfWords / averageWPM;
+
+            readTimeDiv.innerHTML = Math.round(readTime) + " minute read"
+            count.innerHTML = numberOfWords + " -words approximate"
+
+        }
+        calculatedReadTime();
+
+
+
+    </script>
+
+    {{>lowerlinks}}
+</body>
+
+</html>

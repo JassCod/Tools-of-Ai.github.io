@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>upperlinks}}
+    <title>Rytr</title>
+</head>
+
+<body>
+    {{>nav}}
+    <div class="intro">
+        <h1>Rytr Tool Overview</h1>
+        <div class="read-word"></div>
+        <div class="count-word"></div>
+        <p>Advanced natural language processing (NLP) and machine learning techniques are used by AI writing tools like Rytr to
+        produce human-like content depending on the inputs and settings given by the user.
+        In the case of Rytr, it promises to assist users in producing high-quality material in a fraction of the time and
+        expense of employing a professional writer.</p>
+        <p>Writing product summaries or descriptions, blog posts or articles, or even marketing material, may be one application
+        for Rytr.
+        Though AI writing tools have advanced significantly in recent years, there are still certain limits in terms of
+        inventiveness and the capacity to recognise the context and tone necessary for a given piece of writing.</p>
+        <p>It is thus advised to examine and revise the text produced by Rytr before posting to make sure it satisfies the
+        appropriate standard of quality and correctly communicates the intended message.</p>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        const paragraphs = document.querySelectorAll(".intro p");
+        const readTimeDiv = document.querySelector(".read-word");
+        const count = document.querySelector(".count-word");
+
+        const calculatedReadTime = () => {
+            let numberOfWords = 0;
+            const averageWPM = 265;
+
+            paragraphs.forEach(paragraph => {
+                numberOfWords += paragraph.innerHTML.split(" ").length;
+            })
+
+            let readTime = numberOfWords / averageWPM;
+
+            readTimeDiv.innerHTML = Math.round(readTime) + " minute read"
+            count.innerHTML = numberOfWords + " -words approximate"
+
+        }
+        calculatedReadTime();
+
+
+
+    </script>
+
+    {{>lowerlinks}}
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>upperlinks}}
+    <title>chatGPT</title>
+</head>
+
+<body>
+    {{>nav}}
+    <div class="intro">
+        <h1>ChatGPT AI Overview</h1>
+        <div class="read-word"></div>
+        <div class="count-word"></div>
+        <p>One of the top research groups in the field of artificial intelligence, OpenAI, created the conversational AI model
+        known as ChatGPT.
+        The model is constructed using the Transformer architecture and is enhanced using a sizable corpus of online text data.
+        The model's main job is to produce human-like text in response to a prompt or context.</p>
+        <p>Text data from a variety of sources, including as news stories, academic papers, fiction writing, and social media
+        postings, are included in the ChatGPT training corpus.
+        This enables the model to produce content with a variety of styles and tones that is both creative and instructive.
+        The concept may be applied to a wide range of tasks, such as creating content, question-and-answer systems, and
+        chatbots.</p>
+        <p>The capacity of ChatGPT to produce content that is not only grammatically accurate but also semantically meaningful and
+        contextually relevant is one of its distinctive qualities.
+        Because of this, the model may produce writing that is identical to text produced by a person.
+        Furthermore, ChatGPT may produce content in a variety of languages and can be tailored for particular industries and
+        jobs, such customer service, technical writing, or creative writing.</p>
+        <p>The scalability of ChatGPT is an additional benefit.
+        The model is suited for usage in production systems since it can run on cloud platforms and manage large amounts of
+        traffic.
+        Developers may incorporate the model into their own apps and services thanks to OpenAI's API access to the model.</p>
+        <p>It's crucial to remember that ChatGPT is not a perfect tool.
+        It is constrained by the data it was trained on, like any AI models, and occasionally generates biassed or erroneous
+        results.
+        Additionally, if the model receives an explicit or suggestive suggestion or context, it may produce text that is
+        improper or insulting.
+        OpenAI urges users to utilise the model responsibly and offers tools for monitoring and modifying the model's output in
+        order to address these problems.</p>
+        <p>In conclusion, ChatGPT is a potent language model that has the potential to completely change how humans communicate
+        with AI.
+        ChatGPT is a tool that is absolutely worth taking into consideration if you're trying to develop a chatbot, create
+        content, or investigate the potential of AI.</p>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        const paragraphs = document.querySelectorAll(".intro p");
+        const readTimeDiv = document.querySelector(".read-word");
+        const count = document.querySelector(".count-word");
+
+        const calculatedReadTime = () => {
+            let numberOfWords = 0;
+            const averageWPM = 265;
+
+            paragraphs.forEach(paragraph => {
+                numberOfWords += paragraph.innerHTML.split(" ").length;
+            })
+
+            let readTime = numberOfWords / averageWPM;
+
+            readTimeDiv.innerHTML = Math.round(readTime) + " minute read"
+            count.innerHTML = numberOfWords + " -words approximate"
+
+        }
+        calculatedReadTime();
+
+
+
+    </script>
+
+    {{>lowerlinks}}
+</body>
+
+</html>

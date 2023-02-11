@@ -1,0 +1,5 @@
+@media screen and (max-width:362px) {
+   .footer{
+        visibility: hidden;
+   }
+}
