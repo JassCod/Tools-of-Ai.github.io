@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sidhu Services — Back-office for Australian Transport</title>
+  <meta name="description" content="Sidhu Services runs dispatch, accounts, operations and compliance for Australian transport companies — delivered by a dedicated team in India." />
+  <meta name="theme-color" content="#04050d" />
+  <meta property="og:title" content="Sidhu Services — Back-office for Australian Transport" />
+  <meta property="og:description" content="Dispatch, accounts, operations and compliance for Australian transport companies, run from India." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <!-- Loader -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__ring"></div>
+    <div class="loader__word"><span>S</span><span>I</span><span>D</span><span>H</span><span>U</span></div>
+    <div class="loader__count" id="loaderCount">0</div>
+  </div>
+
+  <canvas id="webgl" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+
+  <div class="announce" id="announce" hidden></div>
+
+  <header class="nav" id="nav">
+    <a href="#top" class="brand" aria-label="Sidhu Services home">
+      <span class="brand__mark">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="bm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5eead4"/><stop offset=".5" stop-color="#a78bfa"/><stop offset="1" stop-color="#fbbf24"/></linearGradient></defs><path d="M28 9.5c-2-1.7-4.8-2.6-8-2.6-5.2 0-8.8 2.7-8.8 6.6 0 8.4 17.4 5.2 17.4 13 0 4-3.8 6.6-9.1 6.6-3.6 0-6.8-1.1-9-3.2" fill="none" stroke="url(#bm)" stroke-width="4" stroke-linecap="round"/></svg>
+      </span>
+      <span class="brand__text">Sidhu<b>Services</b></span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#bridge">Model</a>
+      <a href="#services">Services</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#process">Process</a>
+      <a href="#contact" class="nav__cta">Talk to us</a>
+    </nav>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <a href="#bridge">Model</a>
+    <a href="#services">Services</a>
+    <a href="#expertise">Expertise</a>
+    <a href="#process">Process</a>
+    <a href="#contact">Talk to us</a>
+  </div>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero" data-morph="0" data-side="1">
+      <div class="hero__inner" id="heroInner">
+        <p class="eyebrow reveal-up"><span class="dot"></span> Management services for Australian transport</p>
+        <h1 class="hero__title" aria-label="Your fleet's back office, engineered in India.">
+          <span class="line"><span class="split">Your fleet's</span></span>
+          <span class="line"><span class="split chrome">back office,</span></span>
+          <span class="line"><span class="split">engineered</span> <span class="split aurora">in India.</span></span>
+        </h1>
+        <p class="hero__lede reveal-up">Sidhu Services runs <strong>dispatch, accounts, operations and compliance</strong> for Australian transport companies — a dedicated offshore desk that already works the way Australian freight works.</p>
+        <div class="hero__ctas reveal-up">
+          <a href="#services" class="btn btn--primary magnetic"><span>Explore services</span><i></i></a>
+          <a href="#contact" class="btn btn--ghost magnetic"><span>Start a conversation</span></a>
+        </div>
+        <ul class="hero__chips reveal-up" aria-label="Core desks">
+          <li>Dispatch</li><li>Accounts</li><li>Operations</li><li>Compliance</li>
+        </ul>
+      </div>
+      <div class="hero__scroll" aria-hidden="true"><span></span>Scroll the pathway</div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="band" aria-hidden="true">
+      <div class="band__track">
+        <span>Job allocation</span><i>✦</i><span>Driver run sheets</span><i>✦</i><span>Invoicing &amp; BAS prep</span><i>✦</i><span>Payroll support</span><i>✦</i><span>Fatigue records</span><i>✦</i><span>POD tracking</span><i>✦</i><span>Toll reconciliation</span><i>✦</i><span>Chain of Responsibility</span><i>✦</i>
+        <span>Job allocation</span><i>✦</i><span>Driver run sheets</span><i>✦</i><span>Invoicing &amp; BAS prep</span><i>✦</i><span>Payroll support</span><i>✦</i><span>Fatigue records</span><i>✦</i><span>POD tracking</span><i>✦</i><span>Toll reconciliation</span><i>✦</i><span>Chain of Responsibility</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- BRIDGE / MODEL -->
+    <section class="section bridge" id="bridge" data-morph="0" data-side="1">
+      <div class="container">
+        <div class="bridge__grid">
+          <div>
+            <p class="kicker reveal-up">01 — The model</p>
+            <h2 class="h2 reveal-up">Two countries.<br/><span class="aurora">One operating rhythm.</span></h2>
+            <p class="body reveal-up">Your trucks run on Australian roads; your back office runs from India. Our team works aligned to your hours, so bookings are allocated, paperwork is reconciled and compliance records are current — before your next shift even starts.</p>
+            <p class="body reveal-up">You keep full visibility and control. We take the repetitive, time-critical admin off your plate.</p>
+          </div>
+          <div class="clocks reveal-up" id="clocks">
+            <div class="clock tilt">
+              <div class="clock__layer">
+                <span class="clock__flag">IN</span>
+                <span class="clock__label">Operations desk · India</span>
+                <span class="clock__time" data-tz="Asia/Kolkata">--:--</span>
+                <span class="clock__date" data-tz-date="Asia/Kolkata"></span>
+              </div>
+            </div>
+            <div class="clocks__link" aria-hidden="true"><span></span><em id="tzDiff">—</em><span></span></div>
+            <div class="clock tilt">
+              <div class="clock__layer">
+                <span class="clock__flag">AU</span>
+                <span class="clock__label">Your depot · Sydney</span>
+                <span class="clock__time" data-tz="Australia/Sydney">--:--</span>
+                <span class="clock__date" data-tz-date="Australia/Sydney"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section services" id="services" data-morph="1" data-side="1">
+      <div class="container">
+        <p class="kicker reveal-up">02 — What we manage</p>
+        <h2 class="h2 reveal-up">Four desks.<br/><span class="chrome">Zero loose ends.</span></h2>
+        <div class="cards">
+          <article class="card tilt" style="--c1:#22d3ee;--c2:#6366f1">
+            <div class="card__glow"></div>
+            <div class="card__num">01</div>
+            <div class="card__icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 30V14h22v16M26 20h9l7 7v3H26" /><circle cx="13" cy="34" r="4"/><circle cx="35" cy="34" r="4"/></svg>
+            </div>
+            <h3>Dispatch</h3>
+            <p>Job intake, load allocation, driver scheduling and live run updates — so every truck leaves the yard with the right job and the right paperwork.</p>
+            <ul><li>Booking &amp; job entry</li><li>Driver &amp; vehicle allocation</li><li>Run sheets &amp; POD follow-up</li></ul>
+          </article>
+          <article class="card tilt" style="--c1:#a78bfa;--c2:#ec4899">
+            <div class="card__glow"></div>
+            <div class="card__num">02</div>
+            <div class="card__icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="6" width="32" height="36" rx="4"/><path d="M15 15h18M15 23h18M15 31h10"/></svg>
+            </div>
+            <h3>Accounts</h3>
+            <p>Customer invoicing, supplier bills, reconciliations and GST-ready books, kept in step with Australian reporting cycles.</p>
+            <ul><li>Invoicing &amp; receivables</li><li>Payables &amp; reconciliations</li><li>BAS preparation support</li></ul>
+          </article>
+          <article class="card tilt" style="--c1:#f472b6;--c2:#f59e0b">
+            <div class="card__glow"></div>
+            <div class="card__num">03</div>
+            <div class="card__icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="7"/><path d="M24 5v6M24 37v6M5 24h6M37 24h6M10.6 10.6l4.2 4.2M33.2 33.2l4.2 4.2M10.6 37.4l4.2-4.2M33.2 14.8l4.2-4.2"/></svg>
+            </div>
+            <h3>Operations</h3>
+            <p>The day-to-day engine room: fleet records, maintenance reminders, toll and fuel data, reporting and customer communication.</p>
+            <ul><li>Fleet &amp; maintenance logs</li><li>Toll &amp; fuel reconciliation</li><li>KPI &amp; performance reports</li></ul>
+          </article>
+          <article class="card tilt" style="--c1:#fbbf24;--c2:#10b981">
+            <div class="card__glow"></div>
+            <div class="card__num">04</div>
+            <div class="card__icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4l16 6v12c0 10-7 18-16 22C15 40 8 32 8 22V10z"/><path d="M17 24l5 5 9-10"/></svg>
+            </div>
+            <h3>Compliance</h3>
+            <p>Records that stand up to scrutiny — driver documents, fatigue and work-diary checks, and the paper trail Chain of Responsibility expects.</p>
+            <ul><li>Driver licences &amp; inductions</li><li>Fatigue &amp; work-diary audits</li><li>Registration &amp; renewal tracking</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERTISE -->
+    <section class="section expertise" id="expertise" data-morph="2" data-side="1">
+      <div class="container">
+        <div class="expertise__grid">
+          <div class="expertise__copy">
+            <p class="kicker reveal-up">03 — Why a specialist</p>
+            <h2 class="h2 reveal-up">Built for <span class="aurora">Australian</span><br/>transport. Only.</h2>
+            <p class="body reveal-up">Generic outsourcing teams learn your industry on your time. Sidhu Services was shaped by hands-on experience inside Australian transport operations — the terminology, the regulations and the pace are already familiar.</p>
+            <div class="current reveal-up">
+              <span class="current__pulse"></span>
+              <div>
+                <strong>Currently partnered</strong>
+                <span>Running the dispatch, accounts, operations and compliance desks for an Australian transport company.</span>
+              </div>
+            </div>
+          </div>
+          <div class="stack" id="stack">
+            <div class="stack__item tilt"><b>HVNL &amp; NHVR</b><span>Heavy Vehicle National Law obligations and regulator requirements built into our checklists.</span></div>
+            <div class="stack__item tilt"><b>Chain of Responsibility</b><span>Documented processes that help every party in your chain show reasonable steps.</span></div>
+            <div class="stack__item tilt"><b>ATO-aware accounting</b><span>GST, BAS cycles and Australian invoicing conventions as standard.</span></div>
+            <div class="stack__item tilt"><b>Industry language</b><span>Consignments, PODs, linehaul, run sheets, pallets and demurrage — no translation needed.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS (3D cylinder) -->
+    <section class="process" id="process" data-morph="3" data-side="0">
+      <div class="process__pin">
+        <div class="container process__head">
+          <p class="kicker">04 — The pathway</p>
+          <h2 class="h2">From handover to <span class="chrome">autopilot.</span></h2>
+        </div>
+        <div class="cyl-stage">
+          <div class="cyl" id="cyl">
+            <div class="step"><div class="step__in"><em>Step 01</em><h3>Discover</h3><p>We map your current dispatch, accounting and compliance workflows, software and pain points.</p></div></div>
+            <div class="step"><div class="step__in"><em>Step 02</em><h3>Design</h3><p>Clear SOPs, access controls, reporting lines and service levels agreed before anything moves.</p></div></div>
+            <div class="step"><div class="step__in"><em>Step 03</em><h3>Shadow</h3><p>Our team works alongside yours, in your systems, until every task is matched and checked.</p></div></div>
+            <div class="step"><div class="step__in"><em>Step 04</em><h3>Take over</h3><p>We own the daily desk — you get the updates, exceptions and reports you actually need.</p></div></div>
+            <div class="step"><div class="step__in"><em>Step 05</em><h3>Refine</h3><p>Regular reviews tighten turnaround, accuracy and cost as your fleet grows.</p></div></div>
+            <div class="step"><div class="step__in"><em>Step 06</em><h3>Scale</h3><p>Add desks, hours or new depots without the cost of local hiring.</p></div></div>
+          </div>
+        </div>
+        <div class="process__progress"><span id="procBar"></span></div>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="section benefits" data-morph="3" data-side="-1">
+      <div class="container">
+        <p class="kicker reveal-up">05 — What changes</p>
+        <h2 class="h2 reveal-up">More road time.<br/><span class="aurora">Less desk time.</span></h2>
+        <div class="bento">
+          <div class="bento__item bento__item--lg tilt"><span class="big chrome">Lower</span><p>overhead than building an equivalent in-house admin team in Australia.</p></div>
+          <div class="bento__item tilt"><span class="big aurora">Aligned</span><p>to Australian business hours.</p></div>
+          <div class="bento__item tilt"><span class="big chrome">One</span><p>accountable partner across four desks.</p></div>
+          <div class="bento__item bento__item--wide tilt"><span class="big aurora">Audit-ready</span><p>records, kept current every day — not scrambled together at renewal time.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact" data-morph="4" data-side="-1">
+      <div class="container">
+        <div class="contact__panel tilt-soft">
+          <p class="kicker">06 — Let's talk</p>
+          <h2 class="h2 contact__title">Hand us the<br/><span class="chrome">back office.</span></h2>
+          <p class="body">Tell us about your fleet and the desks you'd like to offload. We'll show you exactly how the handover would work.</p>
+          <div class="contact__grid" id="contactGrid">
+            <div class="contact__empty" id="contactEmpty">Contact details are being updated — please check back shortly.</div>
+          </div>
+          <div class="socials" id="socials"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="brand__text">Sidhu<b>Services</b></span>
+      <span>Management services for Australian transport · Operated from India</span>
+      <span>© <span id="year"></span> Sidhu Services</span>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

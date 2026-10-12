@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Admin · Sidhu Services</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/admin.css" />
+</head>
+<body>
+  <div class="bg" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <main class="wrap">
+    <a href="/" class="back">← Back to website</a>
+
+    <!-- Login -->
+    <section class="panel" id="loginView" hidden>
+      <div class="lock" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+      </div>
+      <h1>Owner access</h1>
+      <p class="sub">This area is for the site owner only. Visitors don't need to sign in to view the website.</p>
+      <form id="loginForm" autocomplete="on">
+        <label>Password
+          <input type="password" name="password" id="password" autocomplete="current-password" required />
+        </label>
+        <button class="btn" type="submit">Sign in</button>
+        <p class="msg" id="loginMsg" role="alert"></p>
+      </form>
+    </section>
+
+    <!-- Editor -->
+    <section class="panel panel--wide" id="editView" hidden>
+      <div class="head">
+        <div>
+          <h1>Website contact details</h1>
+          <p class="sub">Anything you leave empty is simply hidden on the website.</p>
+        </div>
+        <button class="btn btn--ghost" id="logout" type="button">Sign out</button>
+      </div>
+
+      <form id="contentForm">
+        <fieldset>
+          <legend>Contact</legend>
+          <div class="grid">
+            <label>Phone<input name="phone" maxlength="60" placeholder="+61 4xx xxx xxx" /></label>
+            <label>WhatsApp number<input name="whatsapp" maxlength="60" placeholder="+91 9xxxx xxxxx" /></label>
+            <label class="full">Email<input name="email" type="email" maxlength="120" placeholder="hello@example.com" /></label>
+            <label class="full">Working hours<input name="hours" maxlength="160" placeholder="Mon–Sat · 6:00am–6:00pm AEST" /></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Offices</legend>
+          <div class="grid">
+            <label class="full">Operations office · India<textarea name="officeIndia" rows="3" maxlength="300"></textarea></label>
+            <label class="full">Australia (address or service area)<textarea name="officeAustralia" rows="3" maxlength="300"></textarea></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Social links <span>(must start with https://)</span></legend>
+          <div class="grid">
+            <label class="full">LinkedIn<input name="linkedin" type="url" maxlength="300" placeholder="https://www.linkedin.com/company/…" /></label>
+            <label>Facebook<input name="facebook" type="url" maxlength="300" placeholder="https://facebook.com/…" /></label>
+            <label>Instagram<input name="instagram" type="url" maxlength="300" placeholder="https://instagram.com/…" /></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Announcement bar <span>(optional, shown at the top of the site)</span></legend>
+          <label class="full"><input name="announcement" maxlength="220" placeholder="e.g. Now onboarding new Australian fleets for 2027" /></label>
+        </fieldset>
+        <div class="actions">
+          <button class="btn" type="submit" id="saveBtn">Save changes</button>
+          <p class="msg" id="saveMsg" role="status"></p>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel" id="loadingView"><p class="sub">Checking access…</p></section>
+  </main>
+
+  <script type="module" src="/src/admin.js"></script>
+</body>
+</html>
